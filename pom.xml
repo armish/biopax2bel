@@ -70,6 +70,7 @@
     <properties>
         <paxtools.version>4.2.1</paxtools.version>
         <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
+        <openbel.version>3.0.0</openbel.version>
     </properties>
 
     <dependencies>
@@ -118,20 +119,29 @@
             <scope>test</scope>
         </dependency>
 
-<!-- we do not have to include hibernate; paxtools-core has those in "provided" scope;
-unless a project actually persists/indexes a biopax model, there is no need in hibarnate  -->
-<!--         <dependency> -->
-<!--             <groupId>org.hibernate</groupId> -->
-<!--             <artifactId>hibernate-search</artifactId> -->
-<!--             <version>4.3.0.Final</version> -->
-<!--             <scope>provided</scope> -->
-<!--         </dependency> -->
-        
 		<dependency>
 			<groupId>org.biopax.paxtools</groupId>
 			<artifactId>pattern</artifactId>
 			<version>[1,]</version>
-		</dependency>        
-        
+		</dependency>
+
+        <dependency>
+            <groupId>org.openbel</groupId>
+            <artifactId>org.openbel.framework.common</artifactId>
+            <version>${openbel.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openbel</groupId>
+            <artifactId>org.openbel.framework.core</artifactId>
+            <version>${openbel.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openbel</groupId>
+            <artifactId>org.openbel.framework.compiler</artifactId>
+            <version>${openbel.version}</version>
+        </dependency>
+
     </dependencies>
 </project>
