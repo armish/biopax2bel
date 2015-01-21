@@ -28,4 +28,7 @@ public class BELUtils {
         );
     }
 
+    public String namespaceId(String id, BELNamespace belNamespace) {
+        return belNamespace.getPrefix() + ":" + id;
+    }
 }
